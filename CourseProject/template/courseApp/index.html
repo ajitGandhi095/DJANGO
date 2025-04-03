@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Information</title>
+    <style>
+        table, tr, td, th{
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-left: 5%;
+            margin-top: 1%;
+            background-color: aquamarine;
+            padding: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h1 {
+            background-color: rgb(244, 225, 83);
+            text-shadow: 2px 1px 1px rgb(84, 204, 211);
+            text-align: center;
+        }
+
+        h3{
+            color: deepskyblue;
+        }
+
+        .cls1 {
+            background-color: greenyellow;
+        }
+        #id1 {
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Hello Friends, The current server time is: {{date}}</h1>
+    <h3>Course Information:</h3>
+    <ul>
+        <li class="cls1">Name: {{name}}</li>
+        <li class="cls1">Prerequisite: {{prerequisite}}</li><br>
+        <li id="id1">Current batch Students are:</li>
+    </ul>
+    <table border="3">
+        <thead>
+            <tr>
+                <th>SName</th>
+                <th>SRollno</th>
+                <th>SMarks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ajit</td>
+                <td>101</td>
+                <td>83</td>
+            </tr>
+            <tr>
+                <td>Amiya</td>
+                <td>102</td>
+                <td>84</td>
+            </tr>
+            <tr>
+                <td>Soumya</td>
+                <td>103</td>
+                <td>86</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
