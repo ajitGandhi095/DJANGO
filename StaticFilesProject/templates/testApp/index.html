@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Files</title>
+</head>
+<body>
+    
+    <h1>This is Static Folder</h1>
+    <ul>
+        <li><a href="pythonpage.html">{{s1}}</a></li>
+        <li>{{s2}}</li>
+        <li>{{s3}}</li>
+    </ul>
+    <img src="{% static 'images/image1.jpg' %}" alt="This is a image" width="20%" height="30%">
+
+</body>
+</html>
