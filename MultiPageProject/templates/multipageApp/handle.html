@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+    
+    <h1>{{head_msg}}</h1>
+
+    <ul>
+        <li>{{msg1}}</li>
+        <li>{{msg2}}</li>
+        <li>{{msg3}}</li>
+    </ul>
+
+    <div>
+        {% if type == "movies" %}
+        <img src="{% static 'images/movies1.jpeg' %}" alt="">
+        <img src="{% static 'images/movies2.jpg' %}" alt="">
+        <img src="{% static 'images/movies3.jpg' %}" alt="">
+        
+        {% elif type == "sports" %}
+        <img src="{% static 'images/sports1.jpg' %}" alt="" height="19%" width="20%">
+        <img src="{% static 'images/sports2.jpg' %}" alt="" height="19%" width="20%">
+        <img src="{% static 'images/sports3.jpg' %}" alt="" height="19%" width="20%">
+
+        {% elif type == "politics" %}
+        <img src="{% static 'images/politics1.jpg' %}" alt="" height="19%" width="20%">
+        <img src="{% static 'images/politics2.png' %}" alt="" height="19%" width="20%">
+        <img src="{% static 'images/politics3.jpg' %}" alt="" height="19%" width="20%">
+
+        {% endif %}
+    </div>
+
+    <ul>
+        {% if type == "movies" %}
+        <li><a href="/sports">Sports Information</a></li>
+        <li><a href="/politics">Politics Information</a></li>
+
+        {% elif type == "sports" %}
+        <li><a href="/movies">Movies Information</a></li>
+        <li><a href="/politics">Politics Information</a></li>
+
+        {% elif type == "politics" %}
+        <li><a href="/movies">Movies Information</a></li>
+        <li><a href="/sports">Sports Information</a></li>
+
+        {% endif %}
+    </ul>
+</body>
+</html>
