@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="{% static 'css/loginstyle.css' %}">
+</head>
+<body>
+    
+    <h1>{{msg}}</h1>
+
+    <div id="form">
+        <form action="">
+            <table>
+                <caption>Create New Account</caption>
+                <tr>
+                    <td><label for="firstname">Firstname</label></td>
+                    <td><input type="text" name="firstname"></td>
+                </tr>
+                <tr>
+                    <td><label for="lastname">Lastname</label></td>
+                    <td><input type="text" name="lastname"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="mobile">Mobile Number</label></td>
+                    <td><input type="number" name="mobile" maxlength="10"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td><label for="repassword">Confirm Password</label></td>
+                    <td><input type="password" name="repassword"></td>
+                </tr>
+            </table>
+        </form>
+
+        <div>
+            <a href="/home"><button type="submit">Signup</button></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+#hero {
+    height: 500px;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), 
+              url('../images/travel.jpg');
+    background-size: cover;
+    
+}
+#navdiv{
+    display: flex;
+    justify-content: space-between;
+    /* font-size: 22px; */
+    padding: 15px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
+}
+#navbar a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 2px rgb(96, 96, 96);
+    font-size: 22px;
+}
+#title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+#account{
+    margin-right: 20px;
+}
+#account button{
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#section2 main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 17%;
+    align-items:flex-start;
+    margin-left: 40%;
+    font-family: 'Segoe UI';
+}
+#headbutton {
+    width: 100px;
+    padding: 7px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font: 15px;
+    margin-top: 5px;
+    margin-left: 4px;
+}
+#subhead1 {
+    font-size: 70px;
+    font-weight: bold;
+    color: rgb(221, 199, 199);
+}
+#subhead2 {
+    color: rgb(221, 199, 199);
+    margin-top: -7px;
+    font-size: 20px;
+    margin-left: 4px;
+}
+#body_sectiondiv{
+    position: relative;
+    padding: 20px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(193, 79, 79, 0.2), rgba(238, 195, 40, 0.2));
+    text-shadow: 1px 1px 2px rgb(96, 96, 96);
+    font-family: 'Segoe UI';
+}
+#body_card {
+    width: 80vw;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-left: 6%;
+    justify-content: center;
+
+}
+#card1{
+    width: 200px;
+    margin-right: 10%;
+    background-color: rgb(215, 214, 214);
+    padding: 10px;
+    bottom: 10%;
+}
+#card2{
+
+}

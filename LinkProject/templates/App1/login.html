@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/loginstyle.css' %}">
+</head>
+<body>
+    
+    <h1>{{msg}}</h1>
+
+    <div id="form">
+        <form action="">
+            <table>
+                <tr>
+                    <td><label for="user">Username</label></td>
+                    <tr><td><input type="email" placeholder="Enter your email" name="user"></td></tr>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <tr><td><input type="password" placeholder="Enter your email" name="password" minlength="8"></td></tr>
+                </tr>
+            </table>
+        </form>
+
+        <div id="reset">
+            <span>Forget Password?</span>
+        </div>
+
+        <div>
+            <a href="/home"><button type="submit">Login</button></a>
+        </div>
+    </div>
+
+</body>
+</html>

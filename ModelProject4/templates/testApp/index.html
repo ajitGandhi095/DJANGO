@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Info</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body{
+            background-color: yellow;
+            color: red;
+        }
+        table, td, tr, th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>TEACHER INFORMATION</h1>
+    {% if teacher %}
+    <table>
+        <thead>
+            <th>Slno</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Salary</th>
+        </thead>
+        {% for val in teacher %}
+        <tbody>
+            <tr>
+                <td>{{val.tno}}</td>
+                <td>{{val.tname}}</td>
+                <td>{{val.sub}}</td>
+                <td>{{val.sal}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No records found.....</p>
+    {% endif %}
+
+</body>
+</html>

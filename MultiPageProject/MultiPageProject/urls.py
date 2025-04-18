@@ -19,7 +19,7 @@ from django.urls import path
 from multipageApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main/', views.main_page),
+    path('', views.main_page),
     path('movies/', views.movies_info),
     path('sports/', views.sports_info),
     path('politics/', views.politics_info)

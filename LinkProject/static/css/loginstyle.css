@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2));
+    color: rgb(236, 138, 78);
+}
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    font-family: 'Segoe UI';
+    background-color: rgb(78, 235, 235);
+    width: 30%;
+    margin-left: 35%;
+    padding: 20px;
+    border-radius: 10px;
+}
+form{
+    font-size: 20px;
+    
+}
+input {
+    font-size: 16px;
+}
+#reset {
+    font-size: 15px;
+}
+#reset:hover {
+    color: red;
+    cursor: pointer;
+}
+button {
+    font-size: 17px;
+    background-color: rgb(169, 227, 42);
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    margin-top: 20px;
+}
