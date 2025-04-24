@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    <h1>Employee Information</h1>
+
+    {% if data %}
+    <table align="center">
+        <thead>
+            <th>Empno</th>
+            <th>Name</th>
+            <th>Gmail</th>
+            <th>Deg</th>
+        </thead>
+        {% for val in data %}
+        <tbody>
+            <tr>
+                <td>{{val.eno}}</td>
+                <td>{{val.ename}}</td>
+                <td>{{val.email}}</td>
+                <td>{{val.deg}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No Record Found.....</p>
+    {% endif %}
+
+</body>
+</html>

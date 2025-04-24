@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faker Data</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    <h1>Student Information</h1>
+    {% if stud_list %}
+        {% for student in stud_list %}
+        <h2>{{student.name}} Information</h2>
+        <ul>
+            <li>Student Rollno: {{student.rollno}}</li>
+            <li>Student Marks: {{student.marks}}</li>
+            <li>Student Email: {{student.email}}</li>
+            <li>Student Phonenumber: {{student.phonenumber}}</li>
+            <li>Student Address: {{student.address}}</li>
+        </ul>
+        <hr/>
+        {% endfor %}
+
+    {% else %}
+    <p>No Records Found.....</p>
+    {% endif %}
+
+</body>
+</html>

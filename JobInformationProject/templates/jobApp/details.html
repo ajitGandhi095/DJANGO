@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{msg}}</title>
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
+</head>
+<body>
+    
+    <h1>{{msg}}</h1>
+
+            <!-- Hyderabad Job -->
+    {% if type == "hyd" %}
+        <table>
+            <thead>
+                <th>Date</th>
+                <th>Company</th>
+                <th>Roll</th>
+                <th>Eligibility</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Phonenumber</th>
+            </thead>
+            {% for val in hyd_list %}
+            <tbody>
+                <tr>
+                    <td>{{val.date}}</td>
+                    <td>{{val.company}}</td>
+                    <td>{{val.roll}}</td>
+                    <td>{{val.eligibility}}</td>
+                    <td>{{val.address}}</td>
+                    <td>{{val.email}}</td>
+                    <td>{{val.phonenumber}}</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+
+    {% elif type == "pune" %}
+        <table>
+            <thead>
+                <th>Date</th>
+                <th>Company</th>
+                <th>Roll</th>
+                <th>Eligibility</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Phonenumber</th>
+            </thead>
+            {% for val in pune_list %}
+            <tbody>
+                <tr>
+                <td>{{val.date}}</td>
+                <td>{{val.company}}</td>
+                <td>{{val.roll}}</td>
+                <td>{{val.eligibility}}</td>
+                <td>{{val.address}}</td>
+                    <td>{{val.email}}</td>
+                    <td>{{val.phonenumber}}</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+
+    {% elif type == "bang" %}
+    <table>
+        <thead>
+            <th>Date</th>
+            <th>Company</th>
+            <th>Roll</th>
+            <th>Eligibility</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Phonenumber</th>
+        </thead>
+        {% for val in bang_list %}
+        <tbody>
+            <tr>
+                <td>{{val.date}}</td>
+                <td>{{val.company}}</td>
+                <td>{{val.roll}}</td>
+                <td>{{val.eligibility}}</td>
+                <td>{{val.address}}</td>
+                <td>{{val.email}}</td>
+                <td>{{val.phonenumber}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+        </table>
+
+    {% else %}
+    <p>No Records Found.....</p>
+    {% endif %}
+
+</body>
+</html>

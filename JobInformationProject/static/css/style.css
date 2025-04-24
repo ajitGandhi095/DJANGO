@@ -1,0 +1,18 @@
+
+div {
+   text-align: center;
+   margin-top: 12em;
+   background-color: lightsalmon;
+   padding: 3em;
+   width: 70%;
+   margin-left: 13em;
+   border-radius: 15px;
+   box-shadow: 1px 1px 5px black;
+}
+a {
+    margin-top: 2em;
+}
+#link2 {
+    margin-left: 2%;
+    margin-right: 2%;
+}
