@@ -1,0 +1,16 @@
+#container {
+    margin-top: 12em;
+    background: lightblue;
+    color: chocolate;
+    width: 500px;
+    height: 300px;
+    padding: 2em;
+    border-radius: 20px;
+    margin-left: 25em;
+}
+a {
+   margin-top: 3em;
+}
+.first-btn{
+    margin-right: 1em;
+}

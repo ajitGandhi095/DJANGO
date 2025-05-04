@@ -1,0 +1,12 @@
+body {
+    background: lightcyan;
+    color: brown;
+}
+h1 {
+    text-align: center;
+}
+form {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}

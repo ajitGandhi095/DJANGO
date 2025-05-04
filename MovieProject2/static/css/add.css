@@ -1,0 +1,14 @@
+body{
+    background: lightcoral;
+}
+#container {
+    text-align: center;
+    border: 1px solid black;
+    background: rgb(247, 241, 241);
+    width: 400px;
+    height: 300px;
+    margin-left: 25em;
+}
+h1{
+    text-align: center;
+}

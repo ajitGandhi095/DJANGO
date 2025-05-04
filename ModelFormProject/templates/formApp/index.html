@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    {% if submit %}
+    <h1>{{name}} Information Submitted Successfully</h1>
+    <a href="">Insert Another Student Information</a>
+
+    {% else %}
+    <h1>Student Information</h1>
+    <form method="post" align="center">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="Register">
+    </form>
+    {% endif %}
+
+</body>
+</html>

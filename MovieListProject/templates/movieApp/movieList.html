@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Information</title>
+    <link rel="stylesheet" href="{% static 'css/movieList.css' %}">
+</head>
+<body>
+    <h1>{{msg}}</h1>
+    {% if movie_list %}
+    <table>
+        <thead>
+            <th>Movie Title</th>
+            <th>Hero</th>
+            <th>Heroine</th>
+            <th>Release Date</th>
+        </thead>
+        {% for movie in movie_list %}
+        <tbody>
+            <tr>
+                <td>{{movie.title}}</td>
+                <td>{{movie.hero}}</td>
+                <td>{{movie.heroine}}</td>
+                <td>{{movie.release}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>NO Movie Records Found....</p>
+    {% endif %}
+    
+    <form action="/main">
+        <input type="submit" value="go to main">
+    </form>
+
+</body>
+</html>

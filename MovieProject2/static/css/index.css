@@ -1,0 +1,18 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12em;
+    background: lightcyan;
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    height: 250px;
+    margin-left: 25em;
+}
+#container_head {
+    margin-bottom: 2em;
+    font-size: 30px;
+    font-weight: bold;
+}
