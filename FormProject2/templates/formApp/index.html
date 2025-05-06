@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+
+    {% if submit %}
+    <h2>{{ename}} Record submitted Successfully</h2>
+    <a href="/record">Want To Add Another Record</a>
+
+    {% else %}
+    <h1>Employee Form</h1>
+    <form method="post">
+
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>
+                    <label for="{{ form.ename.id_for_label }}">{{ form.ename.label }}</label>
+                </td>
+                <td>
+                    {{ form.ename }}
+                </td>
+                {% if form.ename.errors %}
+                <div class="error" style="color: blue;">
+                    {{ form.ename.errors }}
+                </div>
+                {% endif %}
+            </tr>
+        
+            <tr>
+                <td>
+                    <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+                </td>
+                <td>
+                    {{ form.email }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="{{ form.edsg.id_for_label }}">{{ form.edsg.label }}</label>
+                </td>
+                <td>
+                    {{ form.edsg }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="{{ form.esal.id_for_label }}">{{ form.esal.label }}</label>
+                </td>
+                <td>
+                    {{ form.esal }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="{{ form.esec.id_for_label }}">{{ form.esec.label }}</label>
+                </td>
+                <td>
+                    {{ form.esec }}
+                </td>
+            </tr>
+            
+            
+        </table>
+        <button type="submit" style="margin-left: 12em; margin-top: 2em;">Submit</button>
+    </form>
+    {% endif %}
+
+
+</body>
+</html>

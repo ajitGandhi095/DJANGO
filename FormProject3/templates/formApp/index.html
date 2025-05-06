@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+</head>
+<body>
+
+    {% if submit %}
+    <h2>{{ename}} Record submitted Successfully</h2>
+    <a href="/record">Want To Add Another Record</a>
+
+    {% else %}
+    <h1>Employee Form</h1>
+    <form method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <button type="submit">Submit</button>
+    </form>
+    {% endif %}
+
+
+</body>
+</html>

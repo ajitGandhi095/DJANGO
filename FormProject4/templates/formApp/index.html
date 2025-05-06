@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    
+    {% if submit %}
+    <h2>{{name}} form submitted successfully...</h2>
+    <a href="/main">Submit another form</a>
+
+    {% else %}
+    <h1>Student Registration Form</h1>
+    
+    <form method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+        <div style="margin-bottom: 1em;">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label><br>
+            {{ field }}<br>
+
+            <!-- errors -->
+            {% if field.errors %}
+            <span style="color: red;">* {{ field.errors.0 }}</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <button type="submit" style="margin-left: 2em; margin-top: 1em;">Register</button>
+    </form>
+    {% endif %}
+
+</body>
+</html>

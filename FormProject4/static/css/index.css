@@ -1,0 +1,14 @@
+body {
+    background: lightskyblue;
+}
+h1{
+    text-align: center;
+}
+form {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    margin-left: 30em;
+    padding: 15px;
+    background-color: bisque;
+}
