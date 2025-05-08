@@ -22,6 +22,9 @@ def feedbackView(request):
             print("*"*30)
             submit=True
             sname= form.cleaned_data['name']
+        else:
+            print("Validate Name field")
+            
     my_dict= {'form':form, 'submit':submit, 'sname':sname, 'date':today_date}
 
     return render(request, 'formApp/index.html', my_dict)

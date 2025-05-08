@@ -1,0 +1,25 @@
+body {
+    background: lightsalmon;
+    color: darkgreen;
+}
+h1{
+    text-align: center;
+}
+#form_response{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px black;
+    width: 300px;
+    margin-left: 27em;
+    padding: 10px;
+}
+form{
+    background: lightcyan;
+    width: 400px;
+    margin-left: 28em;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px black;
+}

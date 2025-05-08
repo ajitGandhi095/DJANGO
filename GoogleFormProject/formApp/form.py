@@ -81,6 +81,6 @@ class StudentFeedback(forms.Form):
     def clean_name(self):
         print("Name Validate")
         inputname= self.cleaned_data['name']
-        if (len(inputname) < 7):
+        if len(inputname) < 7:
             raise forms.ValidationError("Name minimum 7 character and not digit")
         return inputname

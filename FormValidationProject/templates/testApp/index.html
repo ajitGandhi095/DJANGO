@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    {% if submit %}
+    <div id="form_response">
+        <h3>{{ name }} your form is validate</h3>
+        <a href="/main">USubmit another form</a>
+    </div>
+
+    {% else %}
+    <h1>Form Validation</h1>
+
+    <form method="post">
+        {{ form.as_p}}
+        {% csrf_token %}
+
+        <input type="submit" value="Submit">
+    </form>
+    {% endif %}
+
+</body>
+</html>

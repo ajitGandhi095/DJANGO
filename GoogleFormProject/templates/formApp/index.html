@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Feedback Form</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'script/index.js' %}"></script>
 </head>
 <body>
     
@@ -34,7 +35,7 @@
         
                     <!-- error Messages -->
                     {% if form.inputname.errors %}
-                    <div style="color: red;">* {{ form.inputname.errors }}</div>
+                    <div style="color: red; background-color: blueviolet;">* {{ form.errors }}</div>
                     {% endif %}
                 </div><br>
 
@@ -105,18 +106,18 @@
 
         
             <button type="submit" id="form-btn">Submit</button>
-            <button type="submit" onclick="clearform()" id="clearform">Clear Form</button>
+            <button type="submit" id="clearform" onclick="clearForm()">Clear Form</button>
             
         </form>
         {% endif %}
 
     </div>
 
-    <script>
+    <!-- <script>
         function clearform() {
             document.getElementById("feedback-form").reset();
         }
-    </script>
+    </script> -->
 
 </body>
 </html>
