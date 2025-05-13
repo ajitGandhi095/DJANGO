@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'authApp/base.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+    <div class="container">
+        {% if submit %}
+        <h2>you are signup. Now write your exam</h2>
+        <p>All the best</p>
+
+        {% else %}
+        <h1>Plz signup to write exam...</h1>
+        <form method="post">
+            {{form.as_p}}
+            {% csrf_token %}
+
+            <input type="submit" value="signup">
+        </form>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

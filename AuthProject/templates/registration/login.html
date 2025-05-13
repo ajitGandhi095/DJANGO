@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'authApp/base.html' %}
+{% block body_block %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <h2>Please Login to write your exam..</h2>
+
+            <form method="post">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background: black;
+    padding: 15px;
+}
+.container a {
+    text-decoration: none;
+    color: white;
+    
+}
+#nav-brand {
+    font-size: 24px;
+    font-family: 'Gill Sans MT';
+    margin-left: 2em;
+}
+nav {
+    font-size: 19px;
+    font-family: 'Segoe UI';
+    width: 550px;
+    margin-left: 6em;
+}
+nav a:hover {
+    color: rgb(251, 204, 18);
+}
+#nav-auth {
+    margin-right: 2em;
+    font-size: 19px;
+    font-family: 'Segoe UI';
+    width: 200px;
+}
+#nav-auth a:hover {
+    color: rgb(251, 204, 18);
+}
