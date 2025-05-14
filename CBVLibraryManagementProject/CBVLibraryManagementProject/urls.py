@@ -1,5 +1,5 @@
 """
-URL configuration for CBVModelProject project.
+URL configuration for CBVLibraryManagementProject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from testApp import views
+from libraryApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('list/', views.BookListView.as_view()),
-    path('list2/', views.BookListView2.as_view())
+    path('books/', views.BookList.as_view(), name="booklist"),
+    path('<int:pk>/', views.BookDetails.as_view(), name="detail"),
+    path('create/', views.BookCreate.as_view()),
+    path('update/<int:pk>', views.BookUpdate.as_view()),
+    path('delete/<int:pk>', views.BookDelete.as_view())
 ]

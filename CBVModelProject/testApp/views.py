@@ -6,3 +6,8 @@ from testApp.models import Book
 
 class BookListView(ListView):
     model= Book
+
+class BookListView2(ListView):
+    model= Book
+    template_name= 'testApp/books.html'
+    context_object_name= 'books'
