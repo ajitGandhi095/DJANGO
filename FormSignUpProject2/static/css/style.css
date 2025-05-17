@@ -1,0 +1,16 @@
+body {
+    background: lightgray;
+    color: chocolate;
+}
+h1 {
+    text-align: center;
+}
+form {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 350px;
+    margin-left: 28em;
+    background: white;
+    padding: 10px;
+    text-align: center;
+}

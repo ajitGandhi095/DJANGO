@@ -35,8 +35,9 @@
         
                     <!-- error Messages -->
                     {% if form.inputname.errors %}
-                    <div style="color: red; background-color: blueviolet;">* {{ form.errors }}</div>
+                    <div style="color: red;">* {{ form.inputname.errors }}</div>
                     {% endif %}
+
                 </div><br>
 
                 <div class="form-head-label">
@@ -44,6 +45,12 @@
                         <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
                     </div><br>
                     <span>{{ form.email }}</span>
+
+                    <!-- error msg -->
+                     {% if form.inputemail.errors %}
+                     <div style="color: red;">* {{ form.inputemail.errors }}</div>
+                     {% endif %}
+
                 </div><br>
 
                 <div class="form-head-label">
@@ -51,6 +58,12 @@
                         <label for="{{ form.course.id_for_label }}">{{form.course.label }}</label>
                     </div><br>
                     <span>{{ form.course }}</span>
+
+                    <!-- error msg -->
+                     {% if form.inputcourse.errors %}
+                     <div style="color: red;">{{ form.inputcourse.errors }}</div>
+                     {% endif %}
+
                 </div><br>
 
                 <div class="form-head-label">
@@ -58,6 +71,12 @@
                         <label for="{{ form.institute.id_for_label }}">{{ form.institute.label }}</label>
                     </div><br>
                     <span>{{ form.institute }}</span>
+
+                    <!-- error msg -->
+                     {% if form.inputinstitute.errors %}
+                     <div style="color: red;">{{ form.inputinstitute.errors}}</div>
+                     {% endif %}
+
                 </div><br>
             </div>
 
@@ -102,6 +121,12 @@
                     <label for="{{ form.message.id_for_label }}">{{ form.message.label }}</label>
                 </div>
                 <span>{{ form.message }}</span>
+
+                <!-- error message -->
+                 {% if form.inputmsg.errors %}
+                 <div style="color: red;">* {{form.inputmsg.errors}}</div>
+                 {% endif %}
+                 
             </div><br>
 
         

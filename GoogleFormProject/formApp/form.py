@@ -78,9 +78,30 @@ class StudentFeedback(forms.Form):
         label="Suggesstion"
     )
 
-    def clean_name(self):
-        print("Name Validate")
-        inputname= self.cleaned_data['name']
-        if len(inputname) < 7:
-            raise forms.ValidationError("Name minimum 7 character and not digit")
-        return inputname
+    def clean(self):
+        print("Total VAlidation")
+        total_data= super().clean()
+        print('Name Validation')
+        inputname= total_data['name']
+        if len(inputname) < 5:
+            raise forms.ValidationError("Name Should be 5 chars onwords")
+        
+        print('Email Validation')
+        inputemail= total_data['email']
+        if inputemail[-10:] != "@gmail.com":
+            raise forms.ValidationError("Email extension should be '@gmail.com'")
+        
+        print("Course Validation")
+        inputcourse= total_data['course']
+        if 10> len(inputcourse) > 15:
+            raise forms.ValidationError("Course should be 10 to 15")
+        
+        print("institute Validation")
+        inputinstitute= total_data['institute']
+        if inputinstitute != "NareshIT" :
+            raise forms.ValidationError("Institute Must be NareshIT")
+        
+        print("Message Validation")
+        inputmsg= total_data['message']
+        if 10 > len(inputmsg) > 100:
+            raise forms.ValidationError("Message should be 10 to 100 chars")
